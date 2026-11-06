@@ -1,0 +1,296 @@
+/* Leodis: Outbreak — runtime stylesheet (UI Toolkit)
+   Reference resolution 1080x1920 portrait (see PanelSettings). All sizes are in panel pixels. */
+
+:root {
+    --color-bg: #0B1320;
+    --color-bg-raised: #121D2E;
+    --color-line: rgba(255, 255, 255, 0.10);
+    --color-text: #F3F1EA;
+    --color-text-muted: rgba(243, 241, 234, 0.62);
+    --color-accent: #C8102E;       /* Leeds-style red */
+    --color-accent-dark: #8E0B21;
+    --color-runner: #FDC740;
+    --color-hunter: #DB2B3D;
+    --color-local: #84DBFF;
+    -unity-font-definition: url("/Assets/_Project/Fonts/SourceSerif4.ttf");
+    color: var(--color-text);
+    font-size: 36px;
+}
+
+.safe-area {
+    flex-grow: 1;
+    background-color: var(--color-bg);
+}
+
+/* ---------- screens ---------- */
+
+.screens {
+    flex-grow: 1;
+}
+
+.screen {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 64px 56px 56px 56px;
+    opacity: 1;
+    translate: 0 0;
+    transition-property: opacity, translate;
+    transition-duration: 260ms, 320ms;
+    transition-timing-function: ease-out-cubic, ease-out-cubic;
+}
+
+.screen--hidden {
+    opacity: 0;
+    translate: 0 40px;
+}
+
+.screen--home {
+    justify-content: space-between;
+}
+
+.screen--end {
+    justify-content: space-between;
+}
+
+.screen--hud {
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+/* ---------- typography ---------- */
+
+.eyebrow {
+    font-size: 26px;
+    letter-spacing: 6px;
+    color: var(--color-text-muted);
+    -unity-font-style: normal;
+    margin-bottom: 18px;
+}
+
+.eyebrow--accent {
+    color: var(--color-hunter);
+}
+
+.title {
+    font-size: 112px;
+    -unity-font-style: bold;
+    color: var(--color-text);
+    white-space: normal;
+    margin-bottom: 20px;
+}
+
+.title--small {
+    font-size: 84px;
+}
+
+.subtitle {
+    font-size: 36px;
+    color: var(--color-text-muted);
+    white-space: normal;
+    max-width: 920px;
+}
+
+.footer {
+    font-size: 26px;
+    color: var(--color-text-muted);
+    -unity-text-align: middle-center;
+    margin-top: 28px;
+}
+
+/* ---------- home ---------- */
+
+.home__top {
+    margin-top: 48px;
+}
+
+.home__middle {
+    align-items: center;
+}
+
+.status-card {
+    width: 100%;
+    padding: 36px 44px;
+    background-color: var(--color-bg-raised);
+    border-radius: 28px;
+    border-width: 1px;
+    border-color: var(--color-line);
+}
+
+.status-card__caption {
+    font-size: 24px;
+    letter-spacing: 5px;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+}
+
+.status-card__value {
+    font-size: 64px;
+    -unity-font-style: bold;
+    transition-property: color;
+    transition-duration: 200ms;
+}
+
+.status-card__value--started {
+    color: var(--color-runner);
+}
+
+.home__bottom {
+    margin-bottom: 8px;
+}
+
+/* ---------- buttons ---------- */
+
+.button {
+    height: 128px;
+    border-radius: 64px;
+    border-width: 0;
+    font-size: 40px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    margin: 0;
+    padding: 0 40px;
+    transition-property: scale, background-color;
+    transition-duration: 120ms, 120ms;
+}
+
+.button--primary {
+    background-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+.button--primary:hover {
+    background-color: #D81A39;
+}
+
+.button--primary:active {
+    background-color: var(--color-accent-dark);
+    scale: 0.97 0.97;
+}
+
+.button--secondary {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: var(--color-line);
+    color: var(--color-text-muted);
+    height: 104px;
+    border-radius: 52px;
+    font-size: 34px;
+    -unity-font-style: normal;
+    margin-top: 16px;
+}
+
+.button--secondary:active {
+    background-color: var(--color-bg-raised);
+    scale: 0.97 0.97;
+}
+
+/* ---------- HUD ---------- */
+
+.hud__topbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28px;
+}
+
+.hud__topbar-left {
+    flex-shrink: 1;
+}
+
+.hud__topbar .eyebrow {
+    margin-bottom: 6px;
+}
+
+.hud__role {
+    font-size: 40px;
+    -unity-font-style: bold;
+}
+
+.hud__timer {
+    font-size: 84px;
+    -unity-font-style: bold;
+    color: var(--color-text);
+}
+
+.hud__timer--urgent {
+    color: var(--color-hunter);
+}
+
+.radar-host {
+    width: 100%;
+    height: 968px;
+    border-radius: 32px;
+    overflow: hidden;
+    border-width: 1px;
+    border-color: var(--color-line);
+    background-color: #121A26;
+}
+
+.radar {
+    flex-grow: 1;
+}
+
+.stats {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 28px;
+}
+
+.stat {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 22px 16px;
+    margin-right: 16px;
+    background-color: var(--color-bg-raised);
+    border-radius: 24px;
+    border-width: 1px;
+    border-color: var(--color-line);
+    align-items: center;
+}
+
+.stat--last {
+    margin-right: 0;
+}
+
+.stat__value {
+    font-size: 56px;
+    -unity-font-style: bold;
+}
+
+.stat__value--runner {
+    color: var(--color-runner);
+}
+
+.stat__value--hunter {
+    color: var(--color-hunter);
+}
+
+.stat__caption {
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--color-text-muted);
+    margin-top: 6px;
+}
+
+.event-log {
+    flex-grow: 1;
+    margin-top: 24px;
+    padding: 20px 28px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.event-log__line {
+    font-size: 26px;
+    color: var(--color-text-muted);
+    white-space: normal;
+    margin-bottom: 8px;
+}
+
+.event-log__line--latest {
+    color: var(--color-text);
+}

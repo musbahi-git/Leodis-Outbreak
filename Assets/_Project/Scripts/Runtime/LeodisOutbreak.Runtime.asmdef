@@ -1,0 +1,14 @@
+{
+    "name": "LeodisOutbreak.Runtime",
+    "rootNamespace": "LeodisOutbreak",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

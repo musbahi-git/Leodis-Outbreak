@@ -1,0 +1,71 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="Bootstrap.uss" />
+    <ui:VisualElement name="safe-area" class="safe-area">
+    <ui:VisualElement name="screens" class="screens">
+
+        <!-- HOME -->
+        <ui:VisualElement name="home-screen" class="screen screen--home">
+            <ui:VisualElement class="home__top">
+                <ui:Label name="eyebrow" text="LEEDS  ·  CAMPUS MANHUNT" class="eyebrow" />
+                <ui:Label name="title" text="Leodis: Outbreak" class="title" />
+                <ui:Label name="subtitle" text="Runners hide across the city. Hunters get periodic location reveals. Get caught and you join the hunt." class="subtitle" />
+            </ui:VisualElement>
+            <ui:VisualElement class="home__middle">
+                <ui:VisualElement class="status-card">
+                    <ui:Label text="STATUS" class="status-card__caption" />
+                    <ui:Label name="status-label" text="Ready" class="status-card__value" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="home__bottom">
+                <ui:Button name="start-button" text="Start" class="button button--primary" />
+                <ui:Label name="home-footer" text="Demo mode · synthetic players · no location access" class="footer" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- HUD -->
+        <ui:VisualElement name="hud-screen" class="screen screen--hud screen--hidden">
+            <ui:VisualElement class="hud__topbar">
+                <ui:VisualElement class="hud__topbar-left">
+                    <ui:Label name="hud-phase" text="HUNT IN PROGRESS" class="eyebrow eyebrow--accent" />
+                    <ui:Label name="hud-role" text="You are a Hunter" class="hud__role" />
+                </ui:VisualElement>
+                <ui:Label name="hud-timer" text="03:00" class="hud__timer" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="radar-host" class="radar-host" />
+
+            <ui:VisualElement class="stats">
+                <ui:VisualElement class="stat">
+                    <ui:Label name="stat-runners" text="6" class="stat__value stat__value--runner" />
+                    <ui:Label text="RUNNERS FREE" class="stat__caption" />
+                </ui:VisualElement>
+                <ui:VisualElement class="stat">
+                    <ui:Label name="stat-hunters" text="2" class="stat__value stat__value--hunter" />
+                    <ui:Label text="HUNTERS" class="stat__caption" />
+                </ui:VisualElement>
+                <ui:VisualElement class="stat stat--last">
+                    <ui:Label name="stat-reveal" text="20 s" class="stat__value" />
+                    <ui:Label text="NEXT REVEAL" class="stat__caption" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="event-log" class="event-log" />
+
+            <ui:Button name="end-button" text="End session" class="button button--secondary" />
+        </ui:VisualElement>
+
+        <!-- END -->
+        <ui:VisualElement name="end-screen" class="screen screen--end screen--hidden">
+            <ui:VisualElement class="home__top">
+                <ui:Label text="SESSION OVER" class="eyebrow" />
+                <ui:Label name="end-result" text="Hunters win" class="title title--small" />
+                <ui:Label name="end-summary" text="" class="subtitle" />
+            </ui:VisualElement>
+            <ui:VisualElement class="home__bottom">
+                <ui:Button name="home-button" text="Back to home" class="button button--primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+    </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
