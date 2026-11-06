@@ -1,0 +1,15 @@
+Project: Leeds Manhunt
+
+Long-term goal:
+A Unity-based outdoor manhunt game supporting up to 250 players.
+
+First playable target:
+10–20 players in one bounded playing area.
+
+Current milestone:
+Run a Unity app on a physical phone, then display a small
+3D campus map with simulated player markers.
+
+Not building yet:
+Authentication, multiplayer networking, captures,
+background tracking, custom building models or city-wide gameplay.
