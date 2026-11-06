@@ -14,7 +14,8 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
-
+# Unused Visual Studio workload configuration
+/.vsconfig
 # Memory Profiler generated files
 # MemoryCaptures can get excessive in size
 # They also could contain extremely sensitive data
